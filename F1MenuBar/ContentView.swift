@@ -15,13 +15,28 @@ let strongRed = Color(red: 1.0, green: 0.0, blue: 0.0)
 struct ContentView: View {
     
     @State private var isHovering = false;
+    @State private var drivers : [DriverStandings] = []
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
-            ForEach(1...5, id: \.self) {_ in
-                Text("its lights out and away we go!").fontWeight(.bold)       }
+            Text("2026 Drivers Standings").font(.title).bold()
+            ForEach(drivers.prefix(10),id: \.Driver.driverId){driver in
+                
+                let team = driver.Constructors.first
+                Text("P\(driver.positionText)  \(driver.Driver.givenName) \(driver.Driver.familyName) -  \(team?.name ?? "no name" )").fontWeight(.bold)
+                Text("          \(driver.points) Points")
+            }
+                
         }
         .padding()
+        .task {
+            do {
+                drivers =  try await fetchStandings()
+            } catch {
+                print(error)
+            }
+        }
+//        1. Check the data arrives. Add a print of drivers.count after the fetch line, run the app, open the popover and read the console. You expect 25. If you see an error instead, paste it to me, because it names the key that failed.
         
         
         
