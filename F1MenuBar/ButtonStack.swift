@@ -35,8 +35,6 @@ struct ButtonStack: View {
             .frame(alignment: .leading)
             .padding(10)
             
-            
-            
             Button {
                 //NSApplication: the class that represents the runnning mac app
                 //.shared is the type property that returns the one app object for the process. , like getInstance() in Java. Gets the object without the explicit name
@@ -46,13 +44,13 @@ struct ButtonStack: View {
                 ZStack{
                     Circle()
                         .fill(.clear)
-                        .frame(width: isHovering ? 22 : 17, height: isHovering ? 22:  17)
+                        .frame(width: isHovering ? 27 : 22, height: isHovering ? 27:  22)
                         .glassEffect(.regular.tint(.red))
                     
                     Image(systemName: "xmark")
                         .font(.caption)
                         .fontWeight(.heavy)
-                        .scaleEffect(isHovering ? 1.2 : 1.0)
+                        .scaleEffect(isHovering ? 1.4 : 1.2)
                     
                     
                     
@@ -67,7 +65,8 @@ struct ButtonStack: View {
             .frame(maxWidth: .infinity, alignment: .trailing)
             .padding(10)
             .keyboardShortcut("Q", modifiers: [.command])
-        }.glassEffect(.clear)
+            .offset(x: 7)
+        }.glassEffect()
             .frame(maxWidth: .infinity)
             .padding(7)
     }

@@ -71,3 +71,14 @@ struct Constructor: Codable  { // elements of a Constructor
     let name : String
     let nationality : String
 }
+
+
+//loaded should carry the array of drivers, which is [DriverStandings].
+//failedToLoad should carry the error message, a String.
+//loading stays as it is, since there's nothing to carry.
+
+enum LoadState {
+    case loading
+    case loaded([DriverStandings])
+    case failedToLoad(String)
+}
