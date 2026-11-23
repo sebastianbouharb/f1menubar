@@ -39,7 +39,8 @@ struct ContentView: View {
             //        1. Check the data arrives. Add a print of drivers.count after the fetch line, run the app, open the popover and read the console. You expect 25. If you see an error instead, paste it to me, because it names the key that failed.
             
             
-        }.glassEffect(in: .rect(cornerRadius: 30.0))
+        }.glassEffect(in: .rect(cornerRadius: 15.0))
+            .padding(7)
     }
         
         

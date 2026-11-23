@@ -69,5 +69,6 @@ struct ButtonStack: View {
             .keyboardShortcut("Q", modifiers: [.command])
         }.glassEffect(.clear)
             .frame(maxWidth: .infinity)
+            .padding(7)
     }
 }
