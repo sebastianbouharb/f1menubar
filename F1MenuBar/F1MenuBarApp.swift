@@ -42,10 +42,12 @@ struct F1MenuBarApp: App {
         MenuBarExtra("F1MenuBar", systemImage: "flag.pattern.checkered") {
             VStack(alignment: .leading, spacing: 10){
                 ContentView()
+                ButtonStack()
+                   
             }
+            .background(WindowAccessor())
         }
         .menuBarExtraStyle(.window)
-        
         }
     }
 
