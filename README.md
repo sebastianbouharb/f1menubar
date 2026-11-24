@@ -2,7 +2,8 @@
 
 A macOS menu bar app that shows the current Formula 1 driver standings. Click the checkered flag in the menu bar to see live points, teams, and positions.
 
-![F1MenuBar screenshot](screenshot.png)
+![F1MenuBar screenshot](<img width="307" height="745" alt="Screenshot 2026-11-23 at 4 04 52 PM" src="https://github.com/user-attachments/assets/63067920-30af-4dd6-953f-d671b743f1d0" />
+)
 
 ## Features
 
